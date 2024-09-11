@@ -1,0 +1,98 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box; /* Ensure box-sizing applies to the entire document */
+}
+
+/* Main container styles */
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 1200px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Heading styles */
+h1 {
+    margin: 20px 0;
+    font-size: 2rem; /* Define a default font size */
+}
+
+/* Categories layout */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px; /* Add some spacing between heading and categories */
+}
+
+/* Individual category styling */
+.category {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    flex: 1 1 calc(33.333% - 40px); /* Adjusted for three columns */
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #0056b3;
+}
+
+.category h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem; /* Define a font size for the h2 */
+}
+
+.category p {
+    margin: 0;
+    font-size: 1rem; /* Define a font size for paragraphs */
+}
+
+/* Responsive styles for screens up to 600px */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for smaller screens */
+        margin: 10px 0; /* Adjust margin for heading */
+    }
+
+    .categories {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .category {
+        flex: 1 1 100%;
+        margin: 10px 0;
+        padding: 15px;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    .category h2 {
+        font-size: 1.2rem; /* Adjust subheading size */
+    }
+
+    .category p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+}
